@@ -41,9 +41,19 @@ var options = {
     gap: 70,
     perView: 3,
     peek: -window.innerWidth*0.6,
-    startAt: 1,
+    startAt: 0,
+    focusAt: 'center'
+}
+
+var instructions = {
+	type: 'slider',
+    gap: 70,
+    perView: 3,
+    peek: -window.innerWidth*0.6,
+    startAt: 0,
     focusAt: 'center'
 }
 
 var glide = new Glide('.glide', options).mount();
+var glide = new Glide('.mobile_stages', instructions).mount();
   
