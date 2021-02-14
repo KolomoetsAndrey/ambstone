@@ -25,22 +25,30 @@
     </style>
 
     <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
+    <header class="header products_block" id="header">
+        <div class="container main_menu">
             <div class="row menu_line">
                 <div class="logo">
                     <a href="index.html">
                         <img src="images/logo.png" alt="ambstone.com" class="logo_img">
                     </a>
                 </div>
-                <div class="menu">
+                <div class="menu" id="menu">
                     <ul>
-                        <li><a href="company.html" class="menu_link">Компания</a></li>
-                        <li><a href="products.html" class="menu_link">Продукция</a></li>
-                        <li><a href="gallery.html" class="menu_link">Галерея</a></li>
+                        <li><a href="company.html" class="menu_link">Компания</a><img src="images/arrow_right.png" alt="" class="arrow_right"></li>
+                        <li><a href="products.html" class="menu_link">Продукция</a><img src="images/arrow_right.png" alt="" class="arrow_right"></li>
+                        <li><a href="gallery.html" class="menu_link">Галерея</a><img src="images/arrow_right.png" alt="" class="arrow_right"></li>
+                        <li>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="menu_link">Связаться с нами</a><img src="images/arrow_right.png" alt="" class="arrow_right"></li>
+                        </li>
                     </ul>
                     <span class="lang">Укр</span>
                     <button class="contact_us" data-bs-toggle="modal" data-bs-target="#exampleModal">Связаться с нами</button>
+                </div>
+                <div id="hamburger" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -49,7 +57,7 @@
     <section class="catalogue">
         <div class="container">
             <div class="row">
-                <div class="col-8">
+                <div class="col-lg-8 col-12">
                     <h2>
                         Технология
                     </h2>
@@ -59,10 +67,10 @@
                 </div>
             </div>
             <div class="row ltr_block">
-                <div class="col-lg-5 product_img_block">
+                <div class="col-lg-5 col-12 product_img_block">
                     <img src="images/product1.png" alt="" class="product">
                 </div>
-                <div class="col-lg-7 product_descr_block">
+                <div class="col-lg-7 col-12 product_descr_block">
                     <h3 class="product_title">
                         Название блока
                     </h3>
@@ -89,15 +97,15 @@
                                 Кухня, Открытая столешница, Ванная комната, Архитектурная / Внутренняя / Внешняя облицовка
                             </p>
                         </div>
-                        <div class="download">
-                            <img src="images/download_icon.png" alt="">
-                            <a href="#" class="download_file">Проектная-декларация-с-изм-от 06.11.2019.pdf</a>
-                        </div>
+                    </div>
+                    <div class="download">
+                        <img src="images/download_icon.png" alt="">
+                        <a href="#" class="download_file">Проектная-декларация-с-изм-от 06.11.2019.pdf</a>
                     </div>
                 </div>
             </div>
             <div class="row rtl_block">
-                <div class="col-lg-7 product_descr_block">
+                <div class="col-lg-7 col-12 product_descr_block">
                     <h3 class="product_title">
                         Название блока
                     </h3>
@@ -124,13 +132,13 @@
                                 Кухня, Открытая столешница, Ванная комната, Архитектурная / Внутренняя / Внешняя облицовка
                             </p>
                         </div>
-                        <div class="download">
-                            <img src="images/download_icon.png" alt="">
-                            <a href="#" class="download_file">Проектная-декларация-с-изм-от 06.11.2019.pdf</a>
-                        </div>
+                    </div>
+                    <div class="download">
+                        <img src="images/download_icon.png" alt="">
+                        <a href="#" class="download_file">Проектная-декларация-с-изм-от 06.11.2019.pdf</a>
                     </div>
                 </div>
-                <div class="col-lg-5 product_img_block">
+                <div class="col-lg-5 col-12 product_img_block">
                     <img src="images/product2.png" alt="" class="product">
                 </div>
             </div>
@@ -224,8 +232,8 @@
 
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/glide.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

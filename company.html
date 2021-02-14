@@ -25,22 +25,30 @@
     </style>
 
     <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
+    <header class="header company_block" id="header">
+        <div class="container main_menu">
             <div class="row menu_line">
                 <div class="logo">
                     <a href="index.html">
                         <img src="images/logo.png" alt="ambstone.com" class="logo_img">
                     </a>
                 </div>
-                <div class="menu">
+                <div class="menu" id="menu">
                     <ul>
-                        <li><a href="company.html" class="menu_link">Компания</a></li>
-                        <li><a href="products.html" class="menu_link">Продукция</a></li>
-                        <li><a href="gallery.html" class="menu_link">Галерея</a></li>
+                        <li><a href="company.html" class="menu_link">Компания</a><img src="images/arrow_right.png" alt="" class="arrow_right"></li>
+                        <li><a href="products.html" class="menu_link">Продукция</a><img src="images/arrow_right.png" alt="" class="arrow_right"></li>
+                        <li><a href="gallery.html" class="menu_link">Галерея</a><img src="images/arrow_right.png" alt="" class="arrow_right"></li>
+                        <li>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="menu_link">Связаться с нами</a><img src="images/arrow_right.png" alt="" class="arrow_right"></li>
+                        </li>
                     </ul>
                     <span class="lang">Укр</span>
                     <button class="contact_us" data-bs-toggle="modal" data-bs-target="#exampleModal">Связаться с нами</button>
+                </div>
+                <div id="hamburger" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -49,7 +57,7 @@
     <section class="about_us">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-5 col-12">
                     <h2>
                         О нас
                     </h2>
@@ -58,15 +66,15 @@
                         Благодаря длительному процессу роста и преобразований идей и творчества, компания стала эталоном для ведущих девелоперов и дизайнерских компаний в области отделки драгоценными камнями лучших объектов планеты. Сегодня AMB Stone также представляет одну из самых престижных торговых марок отрасли в активе которой сотни реализованных проектов.
                     </p>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7 col-12">
                     <img src="images/about_us_img.png" alt="">
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-7 col-12">
                     <img src="images/mission.png" alt="">
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-5 col-12">
                     <h2>
                         Миссия
                     </h2>
@@ -76,7 +84,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-5 col-12">
                     <h2>
                         Ценности
                     </h2>
@@ -84,7 +92,7 @@
                         Уникальность, чистота, инновации - это ценности, которые всегда определяли бизнес AMB Stone, что подтверждается делами людей, которые творили историю компании.
                     </p>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7 col-12">
                     <img src="images/goods.png" alt="">
                 </div>
             </div>
@@ -178,8 +186,8 @@
 
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/glide.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
