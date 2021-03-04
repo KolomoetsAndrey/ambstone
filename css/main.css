@@ -20,12 +20,12 @@ button {
   background-size: cover;
   background-position: top center;
   height: 900px;
+  min-height: 310px;
 }
 .header .menu {
   position: relative;
   height: auto;
   width: max-content;
-  overflow-x: hidden;
   transition: all 0.5s;
   top: 0;
   left: 0;
@@ -190,7 +190,7 @@ button::-moz-focus-inner {
 .menu .menu_link:hover {
   box-shadow: inset 0 -1px 0 0 #000000;
 }
-.menu .lang {
+.menu .langs {
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
@@ -202,13 +202,22 @@ button::-moz-focus-inner {
   position: relative;
   margin-left: 0;
 }
-.menu .lang:after {
+.menu .langs li {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.55s opacity, 0.55s visibility;
+}
+.menu .langs:after {
   position: absolute;
   top: 0;
   right: -15px;
   content: url(../images/down.png);
   width: 10px;
   height: 4px;
+}
+.menu .langs:hover li {
+  opacity: 1;
+  visibility: visible;
 }
 .menu .contact_us {
   background-color: #FFE600;
@@ -541,6 +550,8 @@ h1 {
   color: #212121;
   margin: 5px 40px;
   position: relative;
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: 2px;
 }
 .gallery .button-group-home button:after {
@@ -701,11 +712,14 @@ h1 {
   justify-content: space-between;
   margin-bottom: 70px;
 }
+.modal-content .form_group {
+  width: 48%;
+}
 .modal-content .name,
 .modal-content .phone,
 .modal-content .email,
 .modal-content .country {
-  width: 48%;
+  width: 100%;
   border: none;
   border-bottom: 1px solid #000000;
   margin-bottom: 55px;
@@ -745,6 +759,17 @@ h1 {
   border: 1px solid grey;
   background: transparent;
 }
+.modal-content .lable_name,
+.modal-content .lable_phone,
+.modal-content .lable_email,
+.modal-content .lable_country {
+  display: none;
+  position: absolute;
+  top: -12px;
+  left: 11px;
+  color: #9D9D9D;
+  font-size: 12px;
+}
 .btn-close {
   position: absolute;
   right: 0;
@@ -758,6 +783,9 @@ h1 {
   line-height: 44px;
   color: #000000;
   margin-bottom: 50px;
+}
+.modal .confidential {
+  color: #212121;
 }
 .form-check-label {
   margin-bottom: 30px;
@@ -794,7 +822,7 @@ h1 {
     width: 140px;
   }
   .header {
-    height: 500px;
+    height: auto;
     background-position: 18% 100%;
   }
   .header .menu_line {
@@ -932,6 +960,37 @@ h1 {
   }
   .footer .copyright {
     margin-top: 100px;
+  }
+  .modal-dialog {
+    margin: 0;
+  }
+  .modal-content {
+    padding: 10px;
+  }
+  .modal-content .form_group {
+    width: 100%;
+    position: relative;
+  }
+  .modal-content .name,
+  .modal-content .phone,
+  .modal-content .email,
+  .modal-content .country {
+    width: 100%;
+  }
+  .modal h2 {
+    margin-top: 50px;
+  }
+  :focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+  :focus::-moz-placeholder {
+    color: transparent;
+  }
+  :focus:-moz-placeholder {
+    color: transparent;
+  }
+  :focus:-ms-input-placeholder {
+    color: transparent;
   }
 }
 @media (max-width: 767px) {

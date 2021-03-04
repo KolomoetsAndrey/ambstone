@@ -21,7 +21,6 @@ $(document).ready(function() {
 		var initial_items = 100;
 	}
 
-	// var initial_items = 3;
 	var next_items = 3;
 	var $grid = $('#grid').isotope({
 		itemSelector: '.element-item',
@@ -172,5 +171,21 @@ $(document).ready(function() {
 		}
 
 		$(this).toggleClass('open');
+	});
+});
+
+// Inputs
+$(document).ready(function() {
+	$('.form_group .name').focus(function() {
+		$('.lable_name').css('display', 'block');
+	});
+	$('.form_group .phone').focus(function() {
+		$('.lable_phone').css('display', 'block');
+	});
+	$('.form_group .email').focus(function() {
+		$('.lable_email').css('display', 'block');
+	});
+	$('.form_group .country').focus(function() {
+		$('.lable_country').css('display', 'block');
 	});
 });

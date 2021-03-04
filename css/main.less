@@ -20,12 +20,12 @@ input, button {
     background-size: cover;
     background-position: top center;
     height: 900px;
+    min-height: 310px;
 
     .menu {
         position: relative;
         height: auto;
         width: max-content;
-        overflow-x: hidden;
         transition: all 0.5s;
         top: 0;
         left: 0;
@@ -214,7 +214,8 @@ button::-moz-focus-inner {
         }
     }
 
-    .lang {
+
+    .langs {
         font-weight: 500;
         font-size: 14px;
         line-height: 22px;
@@ -226,6 +227,12 @@ button::-moz-focus-inner {
         position: relative;
         margin-left: 0;
 
+        li {
+            opacity: 0;
+            visibility: hidden;
+            transition: .55s opacity, .55s visibility;
+        }
+
         &:after {
             position: absolute;
             top: 0;
@@ -234,7 +241,15 @@ button::-moz-focus-inner {
             width: 10px;
             height: 4px;
         }
+
+        &:hover {
+            li {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
+
 
     .contact_us {
         background-color: #FFE600;
@@ -633,6 +648,8 @@ h1 {
             color: #212121;
             margin: 5px 40px;
             position: relative;
+            padding-left: 0;
+            padding-right: 0;
             padding-bottom: 2px;
 
             &:after {
@@ -828,8 +845,12 @@ h1 {
         margin-bottom: 70px;
     }
 
-    .name, .phone, .email, .country {
+    .form_group {
         width: 48%;
+    }
+
+    .name, .phone, .email, .country {
+        width: 100%;
         border: none;
         border-bottom: 1px solid #000000;
         margin-bottom: 55px;
@@ -872,6 +893,15 @@ h1 {
             background: transparent;
         }
     }
+
+    .lable_name, .lable_phone, .lable_email, .lable_country {
+        display: none;
+        position: absolute;
+        top: -12px;
+        left: 11px;
+        color: #9D9D9D;
+        font-size: 12px;
+    }
 }
 
 .btn-close {
@@ -889,6 +919,10 @@ h1 {
         line-height: 44px;
         color: #000000;
         margin-bottom: 50px;
+    }
+
+    .confidential {
+        color: #212121;
     }
 }
 
@@ -939,7 +973,7 @@ h1 {
     }
 
     .header {
-        height: 500px;
+        height: auto;
         background-position: 18% 100%;
 
         .menu_line {
@@ -1098,12 +1132,6 @@ h1 {
         }
     }
 
-    // .gallery {
-    //     .flavor {
-    //         display: none;
-    //     }
-    // }
-
     .footer {
         padding: 80px 0 0 0;
 
@@ -1122,6 +1150,45 @@ h1 {
         .copyright {
             margin-top: 100px;
         }
+    }
+
+    .modal-dialog {
+        margin: 0;
+    }
+
+    .modal-content {
+        padding: 10px;
+
+        .form_group {
+            width: 100%;
+            position: relative;
+        }
+
+        .name, .phone, .email, .country {
+            width: 100%;
+        }
+    }
+
+    .modal {
+        h2 {
+            margin-top: 50px;
+        }
+    }
+
+    :focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+    
+    :focus::-moz-placeholder {
+        color: transparent;
+    }
+    
+    :focus:-moz-placeholder {
+        color: transparent;
+    }
+    
+    :focus:-ms-input-placeholder {
+        color: transparent;
     }
 
 }

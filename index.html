@@ -24,7 +24,7 @@
     </style>
 
     <!-- Header -->
-    <header class="header index_block" id="header">
+    <header class="header" id="header">
         <div class="container main_menu">
             <div class="row menu_line">
                 <div class="logo">
@@ -42,6 +42,11 @@
                         </li>
                     </ul>
                     <span class="lang">Укр</span>
+                    <ul class="langs">
+                        <li>UA</li>
+                        <li>ENG</li>
+                        <li>RU</li>
+                    </ul>
                     <button class="contact_us" data-bs-toggle="modal" data-bs-target="#exampleModal">Связаться с нами</button>
                 </div>
                 <div id="hamburger" class="hamburger">
@@ -268,14 +273,26 @@
                     Оставить заявку
                 </h2>
                 <form>
-                    <input type="text" name="name" class="name" placeholder="Имя">
-                    <input type="text" name="phone" class="phone" placeholder="Телефон">
-                    <input type="text" name="email" class="email" placeholder="E-mail">
-                    <input type="text" name="country" class="country" placeholder="Страна">
+                    <div class="form_group">
+                        <label for="name" class="lable_name">Имя</label>
+                        <input type="text" name="name" class="name" placeholder="Имя">
+                    </div>
+                    <div class="form_group">
+                        <label for="phone" class="lable_phone">Телефон</label>
+                        <input type="text" name="phone" class="phone" placeholder="Телефон">
+                    </div>
+                    <div class="form_group">
+                        <label for="email" class="lable_email">E-mail</label>
+                        <input type="text" name="email" class="email" placeholder="E-mail">
+                    </div>
+                    <div class="form_group">
+                        <label for="country" class="lable_country">Страна</label>
+                        <input type="text" name="country" class="country" placeholder="Страна">
+                    </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
                         <label class="form-check-label" for="flexCheckDefault">
-                            Я согласен на обработку персональных данных в соответствии с условиями политики конфиденциальности.
+                            Я согласен на обработку персональных данных в соответствии с условиями <a href="#" class="confidential">политики конфиденциальности</a>.
                         </label>
                     </div>
                     <input class="send" id="send" type="button" value="Отправить">
